@@ -1,0 +1,152 @@
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.dll.config
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.pdb
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.exe
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.exe.config
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.rsp
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.exe
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.exe.config
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.rsp
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.AppContext.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Console.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Compression.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Claims.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.ValueTuple.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.exe
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.exe.config
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.rsp
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\VBCSCompiler.exe
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Antlr3.Runtime.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Newtonsoft.Json.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Helpers.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Mvc.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Optimization.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Razor.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Razor.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\WebGrease.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Helpers.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Mvc.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Optimization.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.Razor.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Razor.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Newtonsoft.Json.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Antlr3.Runtime.pdb
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csproj.CoreCompileInputs.cache
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csproj.CopyComplete
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.dll
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.pdb
+C:\Users\Митя\Desktop\as\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csprojAssemblyReference.cache
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.dll.config
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\WebsitePerformance.pdb
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.exe
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.exe.config
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csc.rsp
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.exe
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.exe.config
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\csi.rsp
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.AppContext.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Console.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Compression.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Claims.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.ValueTuple.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.exe
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.exe.config
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\vbc.rsp
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\VBCSCompiler.exe
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Antlr3.Runtime.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Newtonsoft.Json.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Helpers.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Mvc.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Optimization.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Razor.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Razor.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\WebGrease.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Helpers.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Mvc.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Optimization.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.Razor.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\System.Web.WebPages.Razor.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Newtonsoft.Json.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Antlr3.Runtime.pdb
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csprojAssemblyReference.cache
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csproj.CoreCompileInputs.cache
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.csproj.CopyComplete
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.dll
+C:\Users\Митя\Desktop\as — копия\WebsitePerformance\WebsitePerformance\obj\Debug\WebsitePerformance.pdb

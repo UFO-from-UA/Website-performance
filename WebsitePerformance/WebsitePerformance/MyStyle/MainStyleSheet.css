@@ -1,0 +1,28 @@
+﻿body {
+}
+
+.row{
+    margin:3px 0;
+}
+
+.nav-pills {
+    margin: 5px;
+}
+
+#enteredURL {
+    width: auto;
+    width: 90rem;
+    margin: 5px 30px;
+    max-width: unset;
+    font-size: 16px;
+    align-self: center;
+    align-content: center;
+}
+
+.start {
+    width: 70rem;
+    height: 5rem;
+    margin: 5px 30px;
+    align-self: center;
+    align-content: center;
+}

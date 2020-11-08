@@ -1,0 +1,16 @@
+﻿
+
+<div class="MyContainer">
+    @foreach (var it in ViewBag.dataTree)
+    {
+        <div class="row" style="margin-left:@it.LVL;">
+            <div class="col-md-10">            @it.Title    </div>
+        </div>
+
+        @*<div class="row" style="margin-left:@it.LVL;">
+            <div class="col-md-2 ">  Id = @it.Id    </div>
+            <div class="col-md-2 ">  Parent =  @it.Parent_Id    </div>
+        </div>*@
+    }
+</div>
+

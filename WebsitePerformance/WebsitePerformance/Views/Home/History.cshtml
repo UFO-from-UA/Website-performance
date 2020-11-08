@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "History";
+}
+
+<div class="row" style="margin: 10px 30px; font-size:20px;">
+    <div class="col col-md-1">
+        Best :
+    </div>
+    <div class="col col-md-1" id="good">
+        @ViewBag.Best
+    </div>
+</div>
+<div class="row" style="margin: 10px 30px; font-size:20px;">
+  
+    <div class="col col-md-2">
+        Baddest :
+    </div>
+    <div class="col col-md-1" id="bad">
+        @ViewBag.Baddest
+    </div>
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">URL</th>
+            <th scope="col">Speed (ms)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{if (ViewBag.dataPoints != null)
+            {
+                int i = 1;
+                foreach (var it in ViewBag.dataPoints)
+                {
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@it.timestamp</td>
+                        <td>@it.url</td>
+                        <td>@it.pageSpeed</td>
+                    </tr>
+                    i++;
+                }
+            }
+        }
+    </tbody>
+</table>

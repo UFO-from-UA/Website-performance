@@ -1,0 +1,109 @@
+﻿@model IEnumerable<WebsitePerformance.Models.RequestInfo>
+@{
+    ViewBag.Title = "Info";
+}
+<input type="hidden" id="hiddenDataPoints" data-zz="@ViewBag.dataPoints" />
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link href="~/MyStyle/MainStyleSheet.css" rel="stylesheet" />
+
+<script>
+    var tArray = @Html.Raw(Json.Encode(Model));
+    //console.dir(tArray)
+    //console.dir(tArray.length)
+    if (tArray != null) {
+        for (var i = 0; i < tArray.length; i++) {
+            if (i > 100) { break; }
+            document.getElementById("hiddenDataPoints").innerText += tArray[i].url + " Speed:" + tArray[i].pageSpeed + "/n";
+            //console.dir(i + ": " + tArray[i].url + " Speed:" + tArray[i].pageSpeed + "/n");
+        }
+    }
+
+</script>
+
+
+<div class="row">
+    <div class="col-md-10">
+        <h4>Info about @ViewBag.base_url </h4>
+        <h2>@ViewBag.page_speed </h2>
+    </div>
+</div>
+
+<div class="row" style="margin: 5px 30px; font-size:14px;">
+    <div class="col col-lg-offset-8">
+    </div>
+    <div class="col col-lg-1">
+        Baddest :
+    </div>
+    <div class="col col-lg-1" id="bad">
+        @ViewBag.Baddest
+    </div>
+    <div class="col col-lg-1">
+        Best :
+    </div>
+    <div class="col col-lg-1" id="good">
+        @ViewBag.Best
+    </div>
+</div>
+@using (@Html.BeginForm("GetURL", "Home"))
+{
+    <input type="text" name="URL" id="enteredURL" class="txt" tabindex="1" placeholder="https://www.w3schools.com" required autocomplete="on">
+    <div class="row">
+        <input class="Confirn btn btn-success start" id="bSubmit" type="submit" value="Start" />
+    </div>
+}
+
+<ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#tab1">Pages speed graphically</a></li>
+    <li><a data-toggle="pill" href="#tab2">Page speed as a table</a></li>
+    <li><a data-toggle="pill" href="#tab3">MspSite</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+        <div id="chartContainer1" style="height: 200px; width: 100%;"></div>
+    </div>
+    <div id="tab2" class="tab-pane fade">
+        <h3>Page speed from new to latest (Max 100)</h3>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Speed (ms)</th>
+                    <th scope="col">Best (ms)</th>
+                    <th scope="col">Worst (ms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{if (ViewBag.dataPoints != null)
+                    {
+                        int i = 1;
+                        foreach (var it in ViewBag.dataPoints)
+                        {
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@it.timestamp</td>
+                                <td>@it.url</td>
+                                <td>@it.pageSpeed</td>
+                                <td>@it.best</td>
+                                <td>@it.worst</td>
+                            </tr>
+                            i++;
+                            if (i > 100) { break; }
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div id="tab3" class="tab-pane fade">
+        <h3>MspSite for @ViewBag.base_url </h3>
+        <div id='treeview'></div>
+        <div id="partial"></div>
+    </div>
+</div>
+
+<script src="~/Scripts/CanvasJS/jquery.canvasjs.min.js"></script>
+<script src="~/Scripts/_mainJS.js"></script>
