@@ -1,10 +1,11 @@
 ﻿
 
+
 <div class="MyContainer">
     @foreach (var it in ViewBag.dataTree)
     {
         <div class="row" style="margin-left:@it.LVL;">
-            <div class="col-md-10">            @it.Title    </div>
+            <div class="col-md-10">  <b>@it.Ping</b> -  @it.Title    </div>
         </div>
 
         @*<div class="row" style="margin-left:@it.LVL;">

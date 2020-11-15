@@ -8,6 +8,9 @@ Website performance.
 ```
 Sitemap i'ts partial view what parsing your URL to depth 2 
 Sometimes take many time
+Added placeholder
+Maximum waiting time now 3min
+Each site now show performance
 ``` 
 
 ### Used Technologies
@@ -15,6 +18,7 @@ Sometimes take many time
 * **ASP.NET MVC** 
 * **HTML/CSS** 
 * **JS/JQery** 
+* **AJAX** 
 
 
 ### Most popular helping resources what was used

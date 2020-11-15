@@ -90,5 +90,14 @@ function InitCanvas() {
 }
 
 function InitTree() {
-    $("#partial").load("/Home/CreateMap", { url: JSON.parse(sessionStorage.url).url });
+    //$("#partial").load("/Home/CreateMap", { url: JSON.parse(sessionStorage.url).url });
+    //console.dir($("#childCount").val());
+    $.ajax({
+        type: "GET", url: "/Home/CreateMap",
+        //data: JSON.stringify({ 'url': JSON.parse(sessionStorage.url).url, 'linkCountForParent':t}),
+        data: { url: JSON.parse(sessionStorage.url).url, linkCountForParent: $("#childCount").val() },
+        success: function (data) {
+            $('#partial').html(data);
+        }
+    });
 }

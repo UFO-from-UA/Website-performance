@@ -13,6 +13,7 @@ namespace WebsitePerformance.Models
         public static List<RequestInfo> Requests { get; set; }
         public static List<SimpleTreeNode> SiteMapTree { get; set; }
         public static List<string> urls { get; set; }
+        public static DateTime TimeStamp { get; set; }
 
         static RequestList()
         {

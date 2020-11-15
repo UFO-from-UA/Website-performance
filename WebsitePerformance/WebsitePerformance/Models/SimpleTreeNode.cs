@@ -7,9 +7,10 @@ namespace WebsitePerformance.Models
 {
     public class SimpleTreeNode
     {
-        private static int id;
+        private static int id; 
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Ping { get; set; }
         public int? Parent_Id { get; set; }
         public string LVL { get; set; }
 

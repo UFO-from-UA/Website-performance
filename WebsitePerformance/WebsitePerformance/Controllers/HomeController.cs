@@ -19,7 +19,6 @@ namespace WebsitePerformance.Controllers
     {
         private RequestInfo _tempRequestInfo;
 
-
         public ActionResult Info()
         {
             ViewBag.dataPoints = RequestList.Requests;
@@ -53,16 +52,12 @@ namespace WebsitePerformance.Controllers
 
         private void CheckRequest(string url)
         {
-            #region Stopwatch 
+            #region FillPageData 
+            var tmpTime = Stopwatch(url);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            Stopwatch timer1 = new Stopwatch();
-            timer1.Start();
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            timer1.Stop();
-            TimeSpan timeTaken = timer1.Elapsed;
-            ViewBag.page_speed = timeTaken.TotalMilliseconds.ToString() + " Milliseconds.";
+            ViewBag.page_speed = tmpTime.Replace("ms", "Milliseconds.");
             ViewBag.base_url = request.Host;
-            _tempRequestInfo = new RequestInfo(url, timeTaken.TotalMilliseconds.ToString());
+            _tempRequestInfo = new RequestInfo(url, tmpTime.Replace("ms", ""));
             RequestList.Add(_tempRequestInfo);
             #endregion
         }
@@ -86,7 +81,6 @@ namespace WebsitePerformance.Controllers
                         stream.Write(data, 0, data.Length);
                     }
                 }
-
 
                 HttpWebResponse httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
@@ -127,38 +121,48 @@ namespace WebsitePerformance.Controllers
         }
         #endregion
 
-        public ActionResult CreateMap(string url, int depth = 2)
+        public ActionResult CreateMap(string url, int linkCountForParent = 10, int depth = 2 )
         {
             RequestList.SiteMapTree.Clear();
             SimpleTreeNode.Refresh();
-            CreateSitemap(url, depth);
+            RequestList.TimeStamp = DateTime.Now;
+            CreateSitemap(url, linkCountForParent, depth);
             ViewBag.dataTree = RequestList.SiteMapTree;
             return PartialView("_SiteMapPartial");
         }
 
 
-        private void CreateSitemap(string baseUrl, int depth)
+        private void CreateSitemap(string baseUrl, int linkCountForParent , int depth)
         {
             RequestList.urls.Clear();
             RequestList.urls.Add(baseUrl);
             for (int nowDepth = 0; nowDepth < depth; nowDepth++)
             {
-
-               
                 var tmpUrlsList = new List<string>();
+
                 foreach (var url in RequestList.urls)
                 {
+
                     var res = ProcessResponse("", url, nowDepth);
                     if (res == null) { continue; }
-                   
+                    int childsCounter = 0;
+
                     foreach (var i in res)
                     {
                         string tmpUrl = i.ToString();
 
                         //Skip useless
-                        if (tmpUrl.Contains("\"/\""))
+                        if (tmpUrl.Contains("\"/\"")) { continue; }
+                        if (nowDepth != 0)
                         {
-                            continue;
+                            if (url.Contains("https") || url.Contains("http"))
+                            {
+                                if (childsCounter >= linkCountForParent)
+                                {
+                                    break;
+                                }
+                                childsCounter++;
+                            }
                         }
 
                         if (tmpUrl.Contains("\">"))
@@ -166,7 +170,9 @@ namespace WebsitePerformance.Controllers
                             //Check what first
                             if (tmpUrl.IndexOf(" ") > tmpUrl.IndexOf("\">"))
                             {
-                                var node = new SimpleTreeNode(tmpUrl.Substring(0, tmpUrl.IndexOf(@">") - 1).Replace("\"", "").Replace("href=", string.Empty), (nowDepth * 4).ToString() + "rem");
+                                var urlString = tmpUrl.Substring(0, tmpUrl.IndexOf(@">") - 1).Replace("\"", "").Replace("href=", string.Empty);
+
+                                var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                                 if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
                                 if (nowDepth == 0)
                                 {
@@ -182,7 +188,9 @@ namespace WebsitePerformance.Controllers
 
                         if (tmpUrl.Contains(" "))
                         {
-                            var node = new SimpleTreeNode(tmpUrl.Substring(0, tmpUrl.IndexOf(" ") - 1).Replace("\"", "").Replace("href=", string.Empty), (nowDepth * 4).ToString() + "rem");
+                            var urlString = tmpUrl.Substring(0, tmpUrl.IndexOf(" ") - 1).Replace("\"", "").Replace("href=", string.Empty);
+                            if (urlString.Contains(".css")) { continue; }
+                            var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                             if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
 
                             if (nowDepth == 0)
@@ -196,7 +204,9 @@ namespace WebsitePerformance.Controllers
                         }
                         else
                         {
-                            var node = new SimpleTreeNode(tmpUrl.Replace("\"", "").Replace("href=", string.Empty), (nowDepth * 4).ToString() + "rem");
+                            var urlString = tmpUrl.Replace("\"", "").Replace("href=", string.Empty);
+                            if (urlString.Contains(".css")) { continue; }
+                            var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                             if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
                             if (nowDepth == 0)
                             {
@@ -208,7 +218,12 @@ namespace WebsitePerformance.Controllers
                             }
                         }
 
-                        if (nowDepth < depth-1)
+                        if (CheckLoadingTime())
+                        {
+                            return;
+                        }
+
+                        if (nowDepth < depth - 1)
                         {
                             if (RequestList.SiteMapTree[RequestList.SiteMapTree.Count - 1].Title.Contains(@"https://") || RequestList.SiteMapTree[RequestList.SiteMapTree.Count - 1].Title.Contains(@"http://"))
                             {
@@ -221,13 +236,21 @@ namespace WebsitePerformance.Controllers
                 RequestList.urls = tmpUrlsList;
             }
         }
+        #region Helpers
+        private bool CheckLoadingTime()
+        {
+            if ((DateTime.Now - RequestList.TimeStamp).Ticks > new TimeSpan(0, 3, 0).Ticks)
+            {
+                RequestList.urls.Clear();
+                return true;
+            }
+            return false;
+        }
 
         private void TreeSort(int ParentId, SimpleTreeNode node)
         {
             node.Parent_Id = ParentId;
             var ParentIndex = RequestList.SiteMapTree.IndexOf(RequestList.SiteMapTree.Where(x => x.Id == ParentId).FirstOrDefault());
-            var sss = RequestList.SiteMapTree[ParentId];
-            var sss2 = RequestList.SiteMapTree[ParentIndex];
             if (ParentIndex + 1 < RequestList.SiteMapTree.Count)
             {
                 RequestList.SiteMapTree.Insert(1 + ParentIndex, node);
@@ -243,5 +266,34 @@ namespace WebsitePerformance.Controllers
         {
             return RequestList.SiteMapTree.Where(x => x.Title == parentUrl).FirstOrDefault().Id;
         }
+
+        private string Stopwatch(string url)
+        {
+            #region Stopwatch 
+
+            try
+            {
+                if (url.Contains("https") || url.Contains("http"))
+                {
+
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                    Stopwatch timer = new Stopwatch();
+                    timer.Start();
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    timer.Stop();
+                    return timer.Elapsed.TotalMilliseconds.ToString() + " ms ";
+                }
+                else
+                {
+                    return "";
+                }
+            }
+            catch
+            {
+                return "";
+            }
+            #endregion
+        }
+        #endregion
     }
 }

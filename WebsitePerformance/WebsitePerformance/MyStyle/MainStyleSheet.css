@@ -26,3 +26,45 @@
     align-self: center;
     align-content: center;
 }
+
+
+#childCount {
+    max-width: unset;
+    width: 90rem;
+    margin: 5px 30px;
+    font-size: 16px;
+    align-self: center;
+    align-content: center;
+}
+
+.loading{
+    font-size:5em;
+    text-align:center;
+    margin:40rem;
+}
+
+
+.placeholder-content {
+    height: 105px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeholderAnimate;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+    background-size: 1300px;
+}
+
+@keyframes placeholderAnimate {
+    0% {
+        background-position: -650px 0;
+    }
+
+    100% {
+        background-position: 650px 0;
+    }
+}

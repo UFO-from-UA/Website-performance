@@ -100,10 +100,15 @@
     </div>
     <div id="tab3" class="tab-pane fade">
         <h3>MspSite for @ViewBag.base_url </h3>
-        <div id='treeview'></div>
-        <div id="partial"></div>
+        @*<input type="number" id='childCount' min="1" max="20">*@
+        <div id="partial">
+            <div class="page-content">
+                <div class="placeholder-content" >
+                    <span class="loading"> Loading ... </span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-<script src="~/Scripts/CanvasJS/jquery.canvasjs.min.js"></script>
-<script src="~/Scripts/_mainJS.js"></script>
+        <script src="~/Scripts/CanvasJS/jquery.canvasjs.min.js"></script>
+        <script src="~/Scripts/_mainJS.js"></script>
