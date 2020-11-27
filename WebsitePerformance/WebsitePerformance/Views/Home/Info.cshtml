@@ -20,7 +20,29 @@
     }
 
 </script>
+<div id="Modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="closeModal">&times;</span>
+            <h2>Additional information</h2>
+        </div>
+        <div class="modal-body">
 
+            <div id="modalPartial">
+                <div class="page-content">
+                    <div class="placeholder-content">
+                        <span class="loading"> Loading ... </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="modalConfirn btn btn-5" tabindex="7" id="modalConfirn" onclick="OK()"><h3>OK</h3></button>
+        </div>
+    </div>
+
+</div>
 
 <div class="row">
     <div class="col-md-10">
@@ -45,6 +67,7 @@
         @ViewBag.Best
     </div>
 </div>
+
 @using (@Html.BeginForm("GetURL", "Home"))
 {
     <input type="text" name="URL" id="enteredURL" class="txt" tabindex="1" placeholder="https://www.w3schools.com" required autocomplete="on">
@@ -55,7 +78,7 @@
 
 <ul class="nav nav-pills">
     <li class="active"><a data-toggle="pill" href="#tab1">Pages speed graphically</a></li>
-    <li><a data-toggle="pill" href="#tab2">Page speed as a table</a></li>
+    <li><a data-toggle="pill" href="#tab2" class="showModal">Page speed as a table</a></li>
     <li><a data-toggle="pill" href="#tab3">MspSite</a></li>
 </ul>
 

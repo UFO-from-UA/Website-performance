@@ -40,6 +40,16 @@ namespace WebsitePerformance.Controllers
             return View();
         }
 
+        public ActionResult Refresh()
+        {
+            if (RequestList.SiteMapTree.Count!=0)
+            {
+                ViewBag.dataTree = RequestList.SiteMapTree.Where(x=>x.Ping != "");
+                return PartialView("_modalPartial");
+            }
+            return Content("");
+        }
+
         public ActionResult CheckInformation(string url)
         {
             CheckRequest(url);
@@ -69,7 +79,8 @@ namespace WebsitePerformance.Controllers
                 HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpWebRequest.ContentType = "application/xml";
                 httpWebRequest.ContentLength = 0;
-                httpWebRequest.Method = "POST";
+                //httpWebRequest.Method = "POST";
+                httpWebRequest.Method = "GET";
 
                 MatchCollection result = null;
                 if (!string.IsNullOrEmpty(xmlData))

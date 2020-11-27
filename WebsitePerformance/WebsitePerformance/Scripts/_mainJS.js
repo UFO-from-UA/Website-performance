@@ -12,6 +12,7 @@ function Init() {
 
     InitCanvas();
     InitTree();
+    RegisterModal();
 }
 
 function LoadPartial() {
@@ -100,4 +101,44 @@ function InitTree() {
             $('#partial').html(data);
         }
     });
+}
+
+
+function RegisterModal() {
+    var modal = document.getElementById("Modal");
+    var span = document.getElementsByClassName("closeModal")[0];
+    var showModal = document.querySelectorAll('.showModal');
+    //console.dir(showModal);
+    showModal[0].addEventListener('click', function () {
+        modal.style.display = "block";
+    });
+
+    span.onclick = function () {
+        modal.style.display = "none"; 
+    };
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    var timerId = setInterval(Refresh, 1000);
+    setTimeout(() => { clearInterval(timerId); alert('stop'); }, 180000);
+
+}
+
+function Refresh() {
+    $.ajax({
+        type: "GET", url: "/Home/Refresh",
+        success: function (data) {
+            $('#modalPartial').html(data);
+        }
+    });
+    //console.dir(document.getElementById("Modal").offsetHeight);
+    //$('#Modal').scrollTop(50);
+  
+}
+
+function OK() {
+    document.getElementById("Modal").style.display = "none";
 }

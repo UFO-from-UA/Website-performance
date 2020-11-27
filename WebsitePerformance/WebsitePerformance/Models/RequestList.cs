@@ -24,8 +24,15 @@ namespace WebsitePerformance.Models
 
         public static void Add(RequestInfo item)
         {
-            _baddest = _baddest < Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _baddest;
-            _best = _best > Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _best;
+            try
+            {
+                _baddest = _baddest < Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _baddest;
+                _best = _best > Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _best;
+            }
+            catch 
+            {
+                _baddest = 0;
+            }
 
             item = Check(item);
 
