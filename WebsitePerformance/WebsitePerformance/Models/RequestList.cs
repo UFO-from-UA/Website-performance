@@ -12,12 +12,15 @@ namespace WebsitePerformance.Models
         public static double _best = 100000;
         public static List<RequestInfo> Requests { get; set; }
         public static List<SimpleTreeNode> SiteMapTree { get; set; }
+        public static List<SimpleTreeNode> ChartData { get; private set; }
         public static List<string> urls { get; set; }
         public static DateTime TimeStamp { get; set; }
+        public static int ChartDataMode { get; set; } = 0;
 
         static RequestList()
         {
             Requests = new List<RequestInfo>();
+            ChartData = new List<SimpleTreeNode>();
             SiteMapTree = new List<SimpleTreeNode>();
             urls = new List<string>();
         }
@@ -29,7 +32,7 @@ namespace WebsitePerformance.Models
                 _baddest = _baddest < Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _baddest;
                 _best = _best > Convert.ToDouble(item.pageSpeed) ? Convert.ToDouble(item.pageSpeed) : _best;
             }
-            catch 
+            catch
             {
                 _baddest = 0;
             }
@@ -76,6 +79,16 @@ namespace WebsitePerformance.Models
                 item.worst = Convert.ToDouble(item.pageSpeed);
             }
             return item;
+        }
+
+        public static void AddChartData(SimpleTreeNode item)
+        {
+            if (ChartDataMode == 1)
+            {
+                ChartData.Clear();
+                ChartDataMode = 0;
+            }
+            ChartData.Add(item);
         }
     }
 }

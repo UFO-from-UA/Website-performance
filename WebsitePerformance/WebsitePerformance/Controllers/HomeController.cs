@@ -50,6 +50,28 @@ namespace WebsitePerformance.Controllers
             return Content("");
         }
 
+
+        public ActionResult RefreshChart()
+        {
+            try
+            {
+                if (RequestList.ChartData.Count() != 0)
+                {
+               
+                    RequestList.ChartDataMode = 1;
+                    ViewBag.chartData = RequestList.ChartData;
+
+                    return PartialView("_chartPartial", RequestList.ChartData);
+                }
+                
+                return Content("");
+            }
+            catch
+            {
+                return Content("");
+            }
+        }
+
         public ActionResult CheckInformation(string url)
         {
             CheckRequest(url);
@@ -185,6 +207,7 @@ namespace WebsitePerformance.Controllers
 
                                 var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                                 if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
+                                AddChartData(node);                               
                                 if (nowDepth == 0)
                                 {
                                     RequestList.SiteMapTree.Add(node);
@@ -203,7 +226,7 @@ namespace WebsitePerformance.Controllers
                             if (urlString.Contains(".css")) { continue; }
                             var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                             if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
-
+                            AddChartData(node);
                             if (nowDepth == 0)
                             {
                                 RequestList.SiteMapTree.Add(node);
@@ -219,6 +242,7 @@ namespace WebsitePerformance.Controllers
                             if (urlString.Contains(".css")) { continue; }
                             var node = new SimpleTreeNode(urlString, (nowDepth * 4).ToString() + "rem") { Ping = Stopwatch(urlString) };
                             if (RequestList.SiteMapTree.Count(x => x.Title == node.Title) == 1) { continue; }
+                            AddChartData(node);
                             if (nowDepth == 0)
                             {
                                 RequestList.SiteMapTree.Add(node);
@@ -247,6 +271,8 @@ namespace WebsitePerformance.Controllers
                 RequestList.urls = tmpUrlsList;
             }
         }
+
+      
         #region Helpers
         private bool CheckLoadingTime()
         {
@@ -304,6 +330,14 @@ namespace WebsitePerformance.Controllers
                 return "";
             }
             #endregion
+        }
+
+        private void AddChartData(SimpleTreeNode node)
+        {
+            if (node.Title.Contains("https") || node.Title.Contains("http"))
+            {
+                RequestList.AddChartData(node);
+            }
         }
         #endregion
     }

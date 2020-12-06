@@ -3,6 +3,8 @@
 
 window.onload = Init();
 localStorage.setItem("storyIndex", "1");
+var chart2;
+var timerId;
 
 function Init() {
     var btn = document.getElementById("bSubmit");
@@ -67,7 +69,6 @@ function InitCanvas() {
     }
     
     //console.dir(dps);
-  
 
     var chart = new CanvasJS.Chart("chartContainer1", {
         title: {
@@ -88,19 +89,42 @@ function InitCanvas() {
     $("a.canvasjs-chart-credit").css(" ");
     $("a.canvasjs-chart-credit").hide();
 
+    chart2 = new CanvasJS.Chart("chartContainer2", {
+        title: {
+            text: "Data points",
+            fontFamily: "Verdana"
+        },
+        subtitles: [{
+            text: "(ms)",
+            fontFamily: "Verdana"
+        }],    
+        axisX: {
+            valueFormatString: "#",
+            interval: 1,
+            labelFontSize: 0
+        },
+        data: [{
+            type: "splineArea",
+            dataPoints: [{ x: 0, y: 0 }]
+        }]
+    });
+    chart2.render();
 }
 
 function InitTree() {
     //$("#partial").load("/Home/CreateMap", { url: JSON.parse(sessionStorage.url).url });
     //console.dir($("#childCount").val());
-    $.ajax({
-        type: "GET", url: "/Home/CreateMap",
-        //data: JSON.stringify({ 'url': JSON.parse(sessionStorage.url).url, 'linkCountForParent':t}),
-        data: { url: JSON.parse(sessionStorage.url).url, linkCountForParent: $("#childCount").val() },
-        success: function (data) {
-            $('#partial').html(data);
-        }
-    });
+    if (sessionStorage.url != null) {
+        $.ajax({
+            type: "GET", url: "/Home/CreateMap",
+            //data: JSON.stringify({ 'url': JSON.parse(sessionStorage.url).url, 'linkCountForParent':t}),
+            data: { url: JSON.parse(sessionStorage.url).url, linkCountForParent: $("#childCount").val() },
+            success: function (data) {
+                $('#partial').html(data);
+                clearInterval(timerId);
+            }
+        });
+    }
 }
 
 
@@ -122,8 +146,8 @@ function RegisterModal() {
         }
     };
 
-    var timerId = setInterval(Refresh, 1000);
-    setTimeout(() => { clearInterval(timerId); alert('stop'); }, 180000);
+    timerId = setInterval(Refresh, 1000);
+    setTimeout(() => { clearInterval(timerId); }, 180000);
 
 }
 
@@ -134,9 +158,36 @@ function Refresh() {
             $('#modalPartial').html(data);
         }
     });
-    //console.dir(document.getElementById("Modal").offsetHeight);
-    //$('#Modal').scrollTop(50);
   
+
+    //console.dir(chart2.options);
+    
+    $.ajax({
+        type: "GET", url: "/Home/RefreshChart",
+        success: function (data) {
+            //console.dir(data.split("</div>"));
+            for (var i = 0; i < data.split("</div>").length-1; i++) {
+                var reg = new RegExp('<b class="ping">(.*)</b>.*<span class="title">(.*)</span>');
+                var res = data.split("</div>")[i].match(reg);
+                //console.dir(" [ "+i+" ] "+res[0]);
+                //console.dir(" [ " + i + " ] " +res[1].match(/\d+,\d+/)[0]);
+                //console.dir(" [ " + i + " ] " + res[2]);
+
+                if (chart2.options.data[0].dataPoints[chart2.options.data[0].dataPoints.length - 1].label === res[2]) {
+                    continue;
+                }
+
+                chart2.options.data[0].dataPoints.push({
+                    x: chart2.options.data[0].dataPoints.length, y: Number(res[1].match(/\d+,\d+/)[0].replace(',', '.')),
+                    indexLabel: "" + chart2.options.data[0].dataPoints.length, label: "" + res[2]
+                });
+            }
+           
+            chart2.render();
+            $("a.canvasjs-chart-credit").css(" ");
+            $("a.canvasjs-chart-credit").hide();
+        }
+    });
 }
 
 function OK() {

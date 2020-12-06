@@ -171,6 +171,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_SiteMapPartial.cshtml" />
     <Content Include="Views\Shared\_modalPartial.cshtml" />
+    <Content Include="Views\Shared\_chartPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
